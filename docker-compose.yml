@@ -1,0 +1,14 @@
+# SPDX-FileCopyrightText: 2020 tech@factchecklab <tech@factchecklab.org>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+version: '3.6'
+services:
+  chatbot:
+    build:
+      context: .
+    volumes:
+      - .:/usr/src/app
+    ports:
+    - 4040:4040 # ngrok
+    - 5000:5000 # chatbot server
